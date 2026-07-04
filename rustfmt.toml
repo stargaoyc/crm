@@ -1,0 +1,3 @@
+ignore = [
+    "crm/src/pb/crm.rs",
+]
