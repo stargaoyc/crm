@@ -46,7 +46,7 @@ jobs:
       - name: Lint rust sources
         run: cargo clippy --all-targets --all-features --tests --benches -- -D warnings
       - name: Execute rust tests
-        run: cargo nextest run --all-features
+        run: cargo nextest run --all-features --no-tests=pass
       - name: Install git-cliff
         run: |
           curl -L https://github.com/orhun/git-cliff/releases/download/v2.4.0/git-cliff-2.4.0-x86_64-unknown-linux-gnu.tar.gz | tar xz
