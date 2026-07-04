@@ -33,6 +33,8 @@ jobs:
       - name: install nextest
         uses: taiki-e/install-action@nextest
       - uses: Swatinem/rust-cache@v2
+      - name: Generate protobuf
+        run: cargo build --release
       - name: Install nightly rustfmt
         run: |
           rustup toolchain install nightly
